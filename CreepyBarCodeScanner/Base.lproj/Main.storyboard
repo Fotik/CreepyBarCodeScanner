@@ -20,28 +20,40 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXm-Uy-Kxq">
                                 <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="5Sx-1m-kla"/>
                                 </constraints>
-                                <state key="normal" title="Button" backgroundImage="info.png">
+                                <state key="normal" title="Button">
                                     <color key="titleShadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="scanAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Mc-P2-sLs"/>
+                                </connections>
                             </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0z-hC-tAG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="567"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JXm-Uy-Kxq" secondAttribute="trailing" id="5Q8-NF-s2n"/>
+                            <constraint firstItem="r0z-hC-tAG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="O4H-xc-cuI"/>
+                            <constraint firstItem="r0z-hC-tAG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Plu-38-uh7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JXm-Uy-Kxq" secondAttribute="bottom" id="X25-bH-Uhl"/>
                             <constraint firstItem="JXm-Uy-Kxq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r4c-Og-vr9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r0z-hC-tAG" secondAttribute="trailing" id="sM4-Sd-anf"/>
+                            <constraint firstItem="JXm-Uy-Kxq" firstAttribute="top" secondItem="r0z-hC-tAG" secondAttribute="bottom" id="w86-ab-k2W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="r0z-hC-tAG" id="xDX-vb-36D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
-    <resources>
-        <image name="info.png" width="30" height="27"/>
-    </resources>
 </document>
